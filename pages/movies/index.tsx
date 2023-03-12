@@ -16,6 +16,8 @@ const theme = createTheme()
 export default function Album() {
   const [movies, setMovies] = useState<any[]>([])
 
+  const baseURL = "https://haewook-lee.github.io/movie-site/"
+
   useEffect(() => {
     client
       .fetch(
@@ -102,7 +104,7 @@ export default function Album() {
                     <CardActions>
                       <Button
                         size="small"
-                        href={"/movies/" + movie.slug.current}
+                        href={baseURL + "/movies/" + movie.slug.current}
                       >
                         Learn More
                       </Button>

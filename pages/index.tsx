@@ -6,7 +6,6 @@ import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Grid from "@mui/material/Grid"
-import Stack from "@mui/material/Stack"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import Container from "@mui/material/Container"
@@ -16,6 +15,8 @@ const theme = createTheme()
 
 export default function Album() {
   const [movies, setMovies] = useState<any[]>([])
+
+  const baseURL = "https://haewook-lee.github.io/movie-site/"
 
   useEffect(() => {
     client
@@ -66,19 +67,6 @@ export default function Album() {
             >
               A collection of Sci-Fi movies over the years.
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained" href="/movies">
-                Movies
-              </Button>
-              <Button variant="contained" href="/screenings">
-                Screenings
-              </Button>
-            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
@@ -116,7 +104,7 @@ export default function Album() {
                     <CardActions>
                       <Button
                         size="small"
-                        href={"/movies/" + movie.slug.current}
+                        href={baseURL + "/movies/" + movie.slug.current}
                       >
                         Learn More
                       </Button>

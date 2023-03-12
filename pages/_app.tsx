@@ -10,6 +10,8 @@ import ButtonGroup from "@mui/material/ButtonGroup"
 import Button from "@mui/material/Button"
 
 export default function App({ Component, pageProps }: AppProps) {
+  const baseURL = "https://haewook-lee.github.io/movie-site/"
+
   function Copyright() {
     return (
       <Typography variant="body2" color="text.secondary" align="center">
@@ -30,13 +32,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <AppBar position="relative">
         <Toolbar>
           <ButtonGroup variant="text" aria-label="text button group">
-            <Button color="inherit" href="/">
+            <Button color="inherit" href={baseURL + "/"}>
               <TheatersOutlined />
             </Button>
-            <Button color="inherit" href="/movies">
+            <Button color="inherit" href={baseURL + "/movies"}>
               Movies
             </Button>
-            <Button color="inherit" href="/screenings">
+            <Button color="inherit" href={baseURL + "/screenings"}>
               Screenings
             </Button>
           </ButtonGroup>
