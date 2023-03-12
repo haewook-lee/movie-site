@@ -1,3 +1,15 @@
+TO DO:
+
+- Make a home page component
+- Maybe install material-ui and make one
+
+  - let cms take care of the rest?
+
+- Make a Page for:
+  - movies
+  - actors
+  - screenings
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

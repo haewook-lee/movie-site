@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react"
-import client from "../lib/sanity"
+import client from "../../lib/sanity"
 import Button from "@mui/material/Button"
 import Card from "@mui/material/Card"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Grid from "@mui/material/Grid"
-import Stack from "@mui/material/Stack"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import Container from "@mui/material/Container"
@@ -20,7 +19,7 @@ export default function Album() {
   useEffect(() => {
     client
       .fetch(
-        `*[_type == "movie"] | order(releaseDate desc)[0...9]{
+        `*[_type == "movie"] | order(title asc){
       title,
       slug,
       releaseDate,
@@ -56,7 +55,7 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Movies Database
+              Movies
             </Typography>
             <Typography
               variant="h5"
@@ -64,21 +63,8 @@ export default function Album() {
               color="text.secondary"
               paragraph
             >
-              A collection of Sci-Fi movies over the years.
+              All the movies currently in the database.
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained" href="/movies">
-                Movies
-              </Button>
-              <Button variant="contained" href="/screenings">
-                Screenings
-              </Button>
-            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
