@@ -101,7 +101,10 @@ export default function Page({ data }: any) {
                         // pt: "56.25%",
                       }
                     }
-                    image={member.person.image.asset.url}
+                    image={
+                      member.person.image?.asset.url ??
+                      "https://www.writeups.org/wp-content/uploads/Question-DC-Animated-Universe-Justice-League.jpg"
+                    }
                     alt="cast member"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
