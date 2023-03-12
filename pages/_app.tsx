@@ -10,7 +10,7 @@ import ButtonGroup from "@mui/material/ButtonGroup"
 import Button from "@mui/material/Button"
 
 export default function App({ Component, pageProps }: AppProps) {
-  const baseURL = "https://haewook-lee.github.io/movie-site/"
+  const baseURL = "https://haewook-lee.github.io/movie-site"
 
   function Copyright() {
     return (

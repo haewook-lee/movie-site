@@ -16,7 +16,7 @@ const theme = createTheme()
 export default function Album() {
   const [movies, setMovies] = useState<any[]>([])
 
-  const baseURL = "https://haewook-lee.github.io/movie-site/"
+  const baseURL = "https://haewook-lee.github.io/movie-site"
 
   useEffect(() => {
     client
