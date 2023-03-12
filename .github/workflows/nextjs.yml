@@ -26,6 +26,8 @@ concurrency:
 jobs:
   # Build job
   build:
+    env:
+      NEXT_PUBLIC_SANITY_PROJECT_ID: "${{secrets.NEXT_PUBLIC_SANITY_PROJECT_ID}}"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
