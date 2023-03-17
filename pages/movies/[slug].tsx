@@ -36,7 +36,10 @@ export default function Page({ data }: any) {
             </Typography>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container
+          sx={{ py: 8, pl: "3rem !important", pr: "1rem !important" }}
+          maxWidth="md"
+        >
           {/* End hero unit */}
           <Grid container spacing={4}>
             <Grid>
